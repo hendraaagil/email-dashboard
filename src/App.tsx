@@ -16,8 +16,9 @@ import {
   SidebarTrigger,
 } from '@/components/ui/sidebar'
 
-import DomainManagement from './components/pages/domain-management'
-import MailboxManagement from './components/pages/mailbox-management'
+import DomainManagement from '@/components/pages/domain-management'
+import MailboxManagement from '@/components/pages/mailbox-management'
+import BroadcastEmail from '@/components/pages/broadcast-email'
 
 export default function App() {
   const [activeTab, setActiveTab] = useState('domains')
@@ -127,6 +128,7 @@ export default function App() {
         <main className="flex-1 overflow-auto p-4 md:p-6">
           {activeTab === 'domains' && <DomainManagement />}
           {activeTab === 'mailboxes' && <MailboxManagement />}
+          {activeTab === 'broadcast' && <BroadcastEmail />}
           {/* {activeTab === 'mailboxes' && <MailboxManagement />}
           {activeTab === 'broadcast' && <BroadcastEmail />}
           {activeTab === 'settings' && <AccountSettings />} */}
