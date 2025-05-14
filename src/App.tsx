@@ -1,5 +1,3 @@
-'use client'
-
 import { useState } from 'react'
 import { AtSign, Globe, MessageSquare, Settings, User } from 'lucide-react'
 import {
@@ -18,10 +16,7 @@ import {
   SidebarTrigger,
 } from '@/components/ui/sidebar'
 
-// import DomainManagement from './domain-management'
-// import MailboxManagement from './mailbox-management'
-// import BroadcastEmail from './broadcast-email'
-// import AccountSettings from './account-settings'
+import DomainManagement from './components/pages/domain-management'
 
 export default function App() {
   const [activeTab, setActiveTab] = useState('domains')
@@ -129,9 +124,8 @@ export default function App() {
           </div>
         </header>
         <main className="flex-1 overflow-auto p-4 md:p-6">
-          <p>Content goes here.</p>
-          {/* {activeTab === 'domains' && <DomainManagement />}
-          {activeTab === 'mailboxes' && <MailboxManagement />}
+          {activeTab === 'domains' && <DomainManagement />}
+          {/* {activeTab === 'mailboxes' && <MailboxManagement />}
           {activeTab === 'broadcast' && <BroadcastEmail />}
           {activeTab === 'settings' && <AccountSettings />} */}
         </main>
