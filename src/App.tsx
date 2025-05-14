@@ -19,6 +19,7 @@ import {
 import DomainManagement from '@/components/pages/domain-management'
 import MailboxManagement from '@/components/pages/mailbox-management'
 import BroadcastEmail from '@/components/pages/broadcast-email'
+import AccountSettings from '@/components/pages/account-settings'
 
 export default function App() {
   const [activeTab, setActiveTab] = useState('domains')
@@ -129,9 +130,7 @@ export default function App() {
           {activeTab === 'domains' && <DomainManagement />}
           {activeTab === 'mailboxes' && <MailboxManagement />}
           {activeTab === 'broadcast' && <BroadcastEmail />}
-          {/* {activeTab === 'mailboxes' && <MailboxManagement />}
-          {activeTab === 'broadcast' && <BroadcastEmail />}
-          {activeTab === 'settings' && <AccountSettings />} */}
+          {activeTab === 'settings' && <AccountSettings />}
         </main>
       </SidebarInset>
     </SidebarProvider>
