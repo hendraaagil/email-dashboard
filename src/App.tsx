@@ -17,6 +17,7 @@ import {
 } from '@/components/ui/sidebar'
 
 import DomainManagement from './components/pages/domain-management'
+import MailboxManagement from './components/pages/mailbox-management'
 
 export default function App() {
   const [activeTab, setActiveTab] = useState('domains')
@@ -125,6 +126,7 @@ export default function App() {
         </header>
         <main className="flex-1 overflow-auto p-4 md:p-6">
           {activeTab === 'domains' && <DomainManagement />}
+          {activeTab === 'mailboxes' && <MailboxManagement />}
           {/* {activeTab === 'mailboxes' && <MailboxManagement />}
           {activeTab === 'broadcast' && <BroadcastEmail />}
           {activeTab === 'settings' && <AccountSettings />} */}
